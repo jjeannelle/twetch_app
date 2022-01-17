@@ -1,0 +1,41 @@
+@use './../../../../assets/sass/abstracts/variables' as *;
+@use './../../../../assets/sass/abstracts/mixins' as *;
+
+.QuickSearch {
+
+  &-form {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+  
+  &-input {
+    width: 70%;
+    background-color: var(--color-grayscale-grey-light);
+    border: 0;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+
+  &-icon {
+    width: var(--spacing-block-std);
+  }
+
+  &-submit {
+    display: flex;
+    align-items: center;
+
+    button {
+      border-top-right-radius: var(--radius-standard);
+      border-bottom-right-radius: var(--radius-standard);
+      border: none;
+      height: 100%;
+      padding: 0 var(--spacing-block-x-small);
+    }
+  }
+
+  &-submit,
+  &-input {
+    height: var(--spacing-block-large);
+  }
+}

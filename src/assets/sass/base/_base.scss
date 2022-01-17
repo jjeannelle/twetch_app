@@ -1,0 +1,29 @@
+@use './../../../assets/sass/abstracts/variables' as *;
+@use './../../../assets/sass/abstracts/mixins' as *;
+
+body {
+  @extend %TextStyle-Body1;
+  background: var(--color-grayscale-wight);
+}
+
+a {
+  color: var(--color-grayscale-black);
+  text-decoration: none;
+}
+
+.PageContainer {
+  position: relative;
+  margin-top: var(--static-size-header);
+  padding : var(--spacing-block-xx-large) var(--spacing-block-large);
+  overflow-x: hidden;
+
+  @include media("desktop") {
+    margin-left: var(--static-width-panel-left);
+  }
+
+  .LiveStream {
+    @include media("desktop") {
+      margin: calc(-1 * var(--spacing-block-xx-large)) calc(-1 * var(--spacing-block-large));
+    }
+  }
+}

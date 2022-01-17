@@ -1,0 +1,8 @@
+@use './../../../assets/sass/abstracts/variables' as *;
+@use './../../../assets/sass/abstracts/mixins' as *;
+
+%flexImage {
+display: block;
+width: 100%;
+height: auto;
+}

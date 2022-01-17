@@ -1,0 +1,19 @@
+@use './../../../../assets/sass/abstracts/variables' as *;
+@use './../../../../assets/sass/abstracts/mixins' as *;
+
+.PageHeading {
+    text-align: center;
+
+    &-title {
+        @extend %TextStyle-Heading1;
+        margin-bottom: var(--spacing-block-x-large);
+
+        strong {
+            color: var(--color-brand-secondary);
+        }
+    }
+
+    &-text {
+        @extend %TextStyle-Heading3;
+    }
+}

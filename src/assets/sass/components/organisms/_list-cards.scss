@@ -1,0 +1,27 @@
+@use './../../../../assets/sass/abstracts/variables' as *;
+@use './../../../../assets/sass/abstracts/mixins' as *;
+
+.ListCards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  &-item {
+    margin: var(--spacing-block-small);
+    list-style: none;
+  }
+
+  .Card {
+    @include media-between("mobile", "tablet") {
+      width: 264px;
+    }
+
+    @include media-between("tablet", "desktop-large") {
+      width: 280px;
+    }
+
+    @include media("desktop-large") {
+      width: 320px;
+    }
+  }
+}

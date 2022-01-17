@@ -1,0 +1,87 @@
+@use './../../../../assets/sass/abstracts/variables' as *;
+@use './../../../../assets/sass/abstracts/mixins' as *;
+
+.SiteHeader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--static-size-header);
+  background-color: var(--color-grayscale-white);
+  box-shadow: var(--box-shadow-1);
+  z-index: 999;
+
+  &-wrapper {
+    width: 100%;
+    display: grid;
+    align-content: space-around;
+    justify-content: space-between;
+
+    @include media-between("mobile", "tablet") {
+      grid-column-gap: 12px;
+      grid-template-columns: repeat(4,1fr);
+    }
+
+    @include media-between("tablet", "desktop") {
+      grid-column-gap: 32px;
+      grid-template-columns: repeat(8,1fr);
+    }
+
+    @include media("desktop") {
+      grid-template-columns: repeat(12,1fr);
+    }
+  }
+
+  .SiteLogo {
+    grid-column: 1/2;
+  }
+
+  .MainMenu {
+    @include media-between("mobile", "desktop") {
+      display: none;
+    }
+
+    @include media("desktop") {
+      grid-column: 2/5;
+      position: relative;
+    }
+
+    &--isOpen {
+      @include media-between("mobile", "desktop") {
+        display: block;
+      }
+    }
+  }
+
+  .QuickSearch {
+    @include media-between("mobile", "tablet") {
+      grid-column: 2/4;
+    }
+
+    @include media-between("tablet", "desktop") {
+      grid-column: 3/8;
+    }
+
+    @include media("desktop") {
+      grid-column: 5/10;
+    }
+  }
+
+  .BurgerMenu {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    @include media-between("mobile", "tablet") {
+      grid-column: 4/5;
+    }
+
+    @include media-between("tablet", "desktop") {
+      grid-column: 8/9;
+    }
+
+    @include media("desktop") {
+      display: none;
+    }
+  }
+}

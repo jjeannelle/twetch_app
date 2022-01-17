@@ -1,0 +1,49 @@
+@use './../../../../assets/sass/abstracts/variables' as *;
+@use './../../../../assets/sass/abstracts/mixins' as *;
+@use './../../../../assets/sass/abstracts/placeholders' as *;
+
+.Card {
+    transition: all 0.4s;
+    border-radius: var(--radius-large);
+    box-shadow: var(--box-shadow-2);
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    &-picture {
+        @extend %flexImage;
+        border-top-left-radius: var(--radius-large);
+        border-top-right-radius: var(--radius-large);
+    }
+
+    &-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: var(--spacing-block-large);
+        min-height: 180px;
+    }
+
+    &-title {
+        @extend %TextStyle-Heading3;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 80%;
+    }
+
+    &-subtitle,
+    &-content {
+        width: 80%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-weight: 500;
+        font-size: 18px;
+    }
+
+    &-content {
+        margin-bottom: 20px;
+    }
+}

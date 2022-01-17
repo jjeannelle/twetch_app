@@ -1,0 +1,29 @@
+@use './../../../../assets/sass/abstracts/variables' as *;
+@use './../../../../assets/sass/abstracts/mixins' as *;
+
+.LiveStream {
+  &-wrapper {
+    display: grid;
+    padding : var(--spacing-block-std) var(--spacing-block-large);
+
+    @include media("desktop") {
+      width: calc(100% - var(--static-width-stream-chat));
+    }
+  }
+
+  &-title {
+    @extend %TextStyle-Heading3;
+    color: var(--color-brand-secondary);
+    margin-bottom: var(--spacing-block-x-small);
+  }
+
+  &-game {
+    color: var(--color-brand-secondary);
+  }
+
+  &-viewers {
+    text-align: right;
+    color: var(--color-ui-red);
+  }
+}
+

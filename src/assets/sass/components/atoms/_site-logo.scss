@@ -1,0 +1,17 @@
+@use './../../../../assets/sass/abstracts/variables' as *;
+@use './../../../../assets/sass/abstracts/mixins' as *;
+
+.SiteLogo {
+
+    &-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+
+    &-logo {
+        width: 32px;
+        height: 32px;
+    }
+}

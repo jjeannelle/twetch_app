@@ -1,0 +1,12 @@
+@use './../../../../assets/sass/abstracts/variables' as *;
+@use './../../../../assets/sass/abstracts/mixins' as *;
+
+.BurgerMenu {
+  width: var(--spacing-block-x-large);
+  height: var(--static-size-header);
+  cursor: pointer;
+
+  &-icon {
+    width: var(--spacing-block-std);
+  }
+}

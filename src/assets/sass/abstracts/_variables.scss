@@ -1,0 +1,37 @@
+:root {
+    --color-brand-primary: #9150fb;
+    --color-brand-secondary: #7738e5;
+
+    --color-grayscale-white: #ffffff;
+    --color-grayscale-black: #0e0e10;
+    --color-grayscale-grey-light: #e5e5e5;
+    --color-grayscale-grey-semi: #e6e6ea;
+    --color-grayscale-grey-medium: #efeff1;
+    
+    --color-ui-red: #ed143d;
+
+    --color-rgba-black:rgba(0,0,0,0.25);
+
+    --box-shadow-1: 0 1px 2px var(--color-rgba-black),0 0px 2px var(--color-rgba-black);
+    --box-shadow-2: 2px 11px 36px -16px rgba(0, 0, 0, 0.75);
+
+    --spacing-block-xx-large: 64px;
+    --spacing-block-x-large: 48px;
+    --spacing-block-large: 32px;
+    --spacing-block-std: 24px;
+    --spacing-block-small: 16px;
+    --spacing-block-x-small: 8px;
+    --spacing-block-x-x-small: 4px;
+
+    --radius-large: 10px;
+    --radius-standard: 5px;
+    --radius-circle: 50%;
+
+    --tablet-breakpoint: 640;
+    --desktop-breakpoint: 960;
+    --desktop-large-breakpoint: 1300;
+
+    --static-size-header: 50px;
+    --static-width-panel-left: 239px;
+    --static-width-stream-chat: 340px;
+}

@@ -1,0 +1,39 @@
+@use './../../../assets/sass/abstracts/variables' as *;
+@use './../../../assets/sass/abstracts/mixins' as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap');
+
+%TextStyle-Heading1 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+    color: var(--color-grayscale-black);
+    font-size: 50px;
+}
+
+%TextStyle-Heading2 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--color-grayscale-black);
+}
+
+%TextStyle-Heading3 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+    font-size: 21px;
+    color: var(--color-grayscale-black);
+}
+
+%TextStyle-Body1{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--color-grayscale-black);
+}
+
+%TextStyle-Button1 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 1.125;
+}

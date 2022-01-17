@@ -1,0 +1,39 @@
+//Media queries
+
+$breakpoints: (
+    mobile: 0px,
+    tablet: 640px,
+    desktop: 960px,
+    desktop-large: 1300px
+);
+
+@mixin media($breakpoint) {
+
+    @if map-has-key($breakpoints, $breakpoint) {
+        @media (min-width: map-get($breakpoints, $breakpoint)) {
+          @content;
+        }
+      }
+}
+
+@mixin media-between($breakpointMin, $breakpointMax) {
+
+    @if map-has-key($breakpoints, $breakpointMin) and map-has-key($breakpoints, $breakpointMax) {
+  
+      $min-breakpoint: map-get($breakpoints, $breakpointMin);
+      $max-breakpoint: map-get($breakpoints, $breakpointMax);
+  
+      @media (min-width: $min-breakpoint) and (max-width: ($max-breakpoint - 1)) {
+        @content;
+      }
+    
+    } @else {
+  
+      @if (map-has-key($breakpoints, $breakpointMin) == false) {
+        @warn 'Your lower breakpoint was invalid: #{$breakpointMin}.';
+      }
+      @if (map-has-key($breakpoints, $breakpointMax) == false) {
+        @warn 'Your upper breakpoint was invalid: #{$breakpointMax}.';
+      }
+    }
+  }

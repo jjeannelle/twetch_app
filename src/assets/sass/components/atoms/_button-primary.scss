@@ -1,0 +1,20 @@
+@use './../../../../assets/sass/abstracts/variables' as *;
+@use './../../../../assets/sass/abstracts/mixins' as *;
+
+.ButtonPrimary {
+    @extend %TextStyle-Button1;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-grayscale-white);
+    background-color: var(--color-brand-secondary);
+    min-width: 200px;
+    border-radius: var(--radius-standard);
+    padding: var(--spacing-block-small);
+    cursor: pointer;
+
+    &:hover {
+        text-decoration: none;
+        color: #fff;
+    }
+}
