@@ -3,7 +3,7 @@
 Projet fictif en React JS via l'[API de Twitch](https://dev.twitch.tv/docs/api).\
 Liste des meilleurs jeux, des top streams, et top streameurs.\
 Live et Recherche.\
-Création d'un design system (atomic design, webpack)
+Création d'un design system (atomic design, webpack).
 
 
 ## Available Scripts
